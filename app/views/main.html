@@ -1,14 +1,14 @@
-<div>
+<div ng-controller="AddPluntController">
   <h1>{{title}}</h1>
   
-  <ng-form name="addPluntForm" ng-submit="submit(addPluntForm)" ng-controller="AddPluntController">
+  <ng-form name="addPluntForm" ng-submit="submit(addPluntForm)" >
     <label> Название *
       <input type="text" name="name" required>
     </label>
     <label> Частота полива *
       <input type="number" name="freqiencyNumber"/>       
     </label>
-    <select ng-model="selectedFrequency" ng-options="['asdf','asdfd']"></select> 
+    <select ng-model="selectedFrequency" ng-options="type for type in frequencyTypes"></select> 
     <button type="submit">Save</button>
   </ng-form>
 </div>
