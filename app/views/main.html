@@ -1,7 +1,16 @@
 <div>
   <h1>{{title}}</h1>
   
-  <a href="/addPlunt">Add plunt </a>
+  <ng-form name="addPluntForm" ng-submit="submit(addPluntForm)" ng-controller="AddPluntController">
+    <label> Название *
+      <input type="text" name="name" required>
+    </label>
+    <label> Частота полива *
+      <input type="number" name="freqiencyNumber"/>       
+    </label>
+    <select ng-model="selectedFrequency" ng-options="['asdf','asdfd']"></select> 
+    <button type="submit">Save</button>
+  </ng-form>
 </div>
 
 

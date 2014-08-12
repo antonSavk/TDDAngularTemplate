@@ -21,4 +21,10 @@ describe("AddPlantController",function(){
   it("should define scope", function(){
     expect(scope).toBeDefined();
   });
+  
+  it("should define numbers array", function(){
+    expect(scope.frequencyTypes).toBeDefined();
+  });
+  
+
 });
